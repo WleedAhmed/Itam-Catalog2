@@ -1,0 +1,17 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+		
+    <div class="row banner menu">
+		<div class="showoneMovie">
+            <h3>{{movie.name}}</h3>
+            <p>{{movie.description}}</p>
+            <a href='{{url_for('editMovie', category_id = category.id, movie_id=movie.id) }}'>Edit</a>
+            <a href='{{url_for('deleteMovie', category_id = category.id, movie_id=movie.id) }}'>Delete</a>
+            <br><br>
+        </div>
+	</div>
+
+
+    
+{% endblock %}
